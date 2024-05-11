@@ -1,0 +1,256 @@
+%-------------------------
+% Resume in Latex
+% Author : Shubhi Rani
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,oneside,10.8pt]{article}
+
+\usepackage{latexsym}
+% \usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+% \usepackage{fancyhdr}
+\usepackage[margin=20pt]{geometry}
+
+
+% \pagestyle{fancy}
+% \fancyhf{} % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+
+% Adjust margins
+% \addtolength{\topmargin}{-.75in}
+% \addtolength{\oddsidemargin}{-.75in}
+% \addtolength{\evensidemargin}{-0.375in}
+% \addtolength{\textwidth}{3.75cm}
+% \addtolength{\textheight}{1in}
+
+% \addtolength{\topmargin}{-.75in}
+% \addtolength{\oddsidemargin}{-.75in}
+% \addtolength{\textwidth}{3.75cm}
+% \addtolength{\textheight}{2cm}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\titleAndDate}[2]{
+  \small{
+  \vspace{-1pt}
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{#2} \\
+    \end{tabular*}\vspace{-1pt} \\
+  }
+}
+
+\newcommand{\normalText}[1]{
+  \small{
+    {#1}
+  }\vspace{-1pt}\\
+}
+
+\newcommand{\italicText}[1]{
+  \small{
+    \textit{#1}
+  }\vspace{-1pt} \\
+}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Otto White}} \\
+  \href{https://www.linkedin.com/in/otto-white/}{LinkedIn: https://www.linkedin.com/in/otto-white/} & 
+  Email: \href{ow20@ic.ac.uk}{otto.white20@imperial.ac.uk} \\
+  \href{https://github.com/ottowhite}{GitHub: https://github.com/ottowhite} &
+  Mobile: +44 74620 03706 \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\vspace{-7pt}
+\section{Education}
+  \titleAndDate{Imperial College London}{October 2020 - June 2024}
+  \begin{itemize}[leftmargin=10pt,noitemsep]
+    \vspace{-2pt}
+    \item\normalText{Computer Science MEng; First Class Honours (On track)}
+    \vspace{3pt}
+    \item\normalText{Relevant courses: Software Engineering for Industry, Performance Engineering, Data Processing Systems, Distributed Algorithms, Concurrency, Advanced Computer Architecture, OSs, Custom Computing.}
+  \end{itemize}
+  
+  \vspace{2pt}
+
+  \titleAndDate{Hurstpierpoint College}{Sept 2018 - June 2020}
+  \begin{itemize}[leftmargin=10pt,noitemsep]
+    \vspace{-2pt}
+    \item\normalText{A-levels; A*A*A*A* (Maths, Further Maths, Computer Science, EPQ (Machine learning))}
+  \end{itemize}
+  
+  \vspace{-8pt}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+  \titleAndDate{BidFX}{April 2023 - August 2023}
+  \italicText{Core Engineer}
+  \begin{itemize}[leftmargin=10pt]
+    \vspace{-1pt}
+    \item\normalText{Primarily responsible for design and implementation of the most complex component of a high-performance FIX pricing service, providing pricing to all downstream FX pricing and trading services.}
+    \item\normalText{Consulted/paired with industry leaders to implement Continuous Delivery on our team; utilized thorough testing + TDD, pair programming, small+frequent PRs, incremental architecture and refactoring, optimizing test suites, builds, and pipelines for fast feedback, tickets+docs on the fly.}
+    \item\normalText{Optimized a complex Java application for \begin{math}\mu\end{math}s tail-latency, utilizing profiling, object pooling for garbage elimination, single-threading, NIO, many compression mechanisms. Exercising understanding and manipulating the JVM/OS/network/hardware interactions.}
+  \end{itemize}
+  
+  \vspace{4pt}
+  
+  \titleAndDate{Cub3 Inc}{June 2022 - August 2022}
+  \italicText{Backend Engineer, Managed 1-2 Junior Devs}
+  \begin{itemize}[leftmargin=10pt]
+    \vspace{-1pt}
+    \item\normalText{Architected and wrote a proxied gRPC backend (including Solana blockchain services, 19 table primsa database, extensible permissioning system, grew 2k to 20k+ lines codebase) enabling custodial wallet and NFT management services.}
+    \item\normalText{Facilitated 3 products with 1 million+ users at maturity, supporting team in securing latest funding round in a time of market uncertainty.}
+    \item\normalText{Architected a distributed event processing system utilizing composable WASM binaries and a cloud cache layer. }
+  \end{itemize}
+
+  \vspace{4pt}
+  
+  \titleAndDate{Futrli}{June 2019}
+  \italicText{Data Science and QA Intern}
+  \begin{itemize}[leftmargin=10pt]
+    \item\normalText{Learned to develop with TDD/BDD, wrote front-end integration tests with Selium, used terminals, shell scripting and TMUX.}
+    \item\normalText{Experimented with different forecasting models on business expense data in Python with Pandas, Numpy and Matplotlib. }
+  \end{itemize}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\titleAndDate{Badger - Full-stack mobile app in Flutter, Go, and Python}{October 2022 - January 2023}
+\begin{itemize}[leftmargin=10pt]
+    \item\normalText{Created a mobile platform capable of analyzing cricket performance to enable talented cricketers from deprived areas to be scouted. }
+    \item\normalText{Created a robust approach to produce 3D reconstructions of cricket scenes with OpenCV, Mediapipe, and Linear Algebra. }
+    \item\normalText{Technologies used: OpenCV, Mediapipe, PnP Algorithm, gRPC, Dart, Flutter, Go-connect, Cloud Run, GCP, MongoDB, Flask}
+\end{itemize}
+
+
+\vspace{4pt}
+
+\titleAndDate{WACC - Compiler in Rust}{January 2022 - March 2022}
+\begin{itemize}[leftmargin=10pt]
+    \item\normalText{Wrote an efficient and memory-safe 7-stage optimizing compiler. }
+    \item\normalText{Designed and implemented the four compiler stages for graph coloring register allocation, dramatically increasing execution speed of compiled executables through minimizing stack use; only group in the cohort to successfully implement.}
+    \item\normalText{Created an extensible regression integration testing framework in Bash. }
+\end{itemize}
+
+\vspace{4pt}
+    
+\titleAndDate{Pintos - Operating System in C}{October 2021 - December 2021}
+\begin{itemize}[leftmargin=10pt]
+    \item\normalText{Various kernel extensions including schedulers, user processes/program facilitation, system calls, virtual memory with paging. }
+    \item\normalText{Honed my design skills by creating the full virtual memory architecture, enabling productive delegation to different team members and execution. Additionally allowing me to crisis manage when two of four group members experienced burnout. }
+    \item\normalText{Designed a fine-grained concurrent solution allowing shared access of global virtual memory resources by different user processes. }
+\end{itemize}
+    
+% \resumeSubItem{Image / Video Processing library}{}
+%     \resumeItemListStart
+%         \resumeItemWithoutTitle{}{Wrote an efficient library able to perform different image / video transformations including background removal and edge detection in C. }
+%     \resumeItemListEnd
+
+\vspace{4pt}
+
+\titleAndDate{Linux Tinkering}{January 2021 - Present}
+\begin{itemize}[leftmargin=10pt]
+    \item\normalText{Spent 400+ hours tinkering with and optimizing my Linux setup as a programming and working environment. Working with Arch, Nix, Ubuntu, Scripting, Cluster management, Containerisation; enabling me to quickly utilize new technologies and environments. }
+\end{itemize}
+
+% \vspace{4pt}
+
+% \titleAndDate{Artificial Neural Network library in Python}{January 2018 - January 2019}
+% \begin{itemize}[leftmargin=10pt]
+%     \item\normalText{Self-taught the linear algebra and calculus required for creation and backpropagation of arbitrary ANNs, creating an implementation with Pandas, Numpy and Matplotlib; applied to to MNIST for 96\% accuracy on test set. }
+%     \item\normalText{Winning best EPQ award out of approx. 150 candidates, and the Computer Science award for that year. }
+%     \item\normalText{Experimented with different activation functions, weight initialization and update schemes, faced vanishing gradients, optimized for 20x speed to allow training on very limiting hardware. }
+% \end{itemize}
+% 
+% \vspace{4pt}
+
+% \titleAndDate{Concurrent Data Structure Implementations in C++ and Java} {November 2022}
+% \begin{itemize}[leftmargin=10pt]
+%     \item\normalText{Implemented concurrent Hashsets in C++ with varying granularities 
+%  - coarse grained, striped and refinable (including reference counting and scoped r/w lock approaches). Verified correctness with ThreadSanitizer and AddressSanitizer. }
+%     \item\normalText{Implemented concurrent sets in Java with varying granularities - coarse grained, hand-over-hand and optimistic. }
+% \end{itemize}
+
+   
+% \titleAndDate{Forex trading / market making / finance}{March 2020 - October 2020}
+% \begin{itemize}[leftmargin=10pt]
+%     \item\normalText{
+% Traded the foreign exchange market during the pandemic with a focus on manipulation; learned about investment, markets, stocks, commodities, derivatives, market making with options; wrote and simulated market making algorithms. }
+%     % \item\normalText{Partook in a course in which I learned about options trading and market making, writing a market making algorithm to compete against others. }
+% \end{itemize}
+
+% \titleAndDate{Mira - Full-stack web application in Typescript}{May 2022 - June 2022}
+% \begin{itemize}[leftmargin=10pt]
+%     \item\normalText{Designed and implemented full-stack infrastructure including a React and Next front-end with custom Node and Express back-end; also including cloud integration (GCR, Cloud Run, Cloud Secrets, Firebase, GitHub Actions), and CI/CD. }
+%     \item\normalText{Managed the team, including the agile process with regular stand-ups, JIRA tickets, and a centralized knowledge-base in Notion. }
+% \end{itemize}
+
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills Summary}
+
+\normalText{\textbf{Languages} Rust, C, Java, Python, C++, Typescript, Javascript, Kotlin, Unix Scripting, English, Spanish (un poco)}
+\vspace{3pt}
+\normalText{\textbf{Skills} Continuous Delivery, TDD, Linux, Pipelines, Containerization, Git, VIM+Copilot+IDE Code Gen, Debugging, Scripting, JIRA, GCP}
+\vspace{3pt}
+\normalText{\textbf{Interests} Skateboarding, extreme sports, music, 
+ motorbikes, meditation, reading, socializing, travelling, finance, learning Spanish}
+
+%-------------------------------------------
+\end{document}
